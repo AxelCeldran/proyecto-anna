@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&amp;display=swap');
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 64px;
+      fill: #000000;
+      letter-spacing: 12.8px;
+    }
+  </style>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="logo-text">ANNA</text>
+</svg>

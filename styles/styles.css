@@ -29,9 +29,10 @@ a, a:visited, a:hover, a:active {
 }
 
 /* Logo */
-.logo, .logo:visited, .logo:hover, .logo:active {
-    color: var(--negro) !important;
-    text-decoration: none;
+.logo img {
+    height:50px;
+    width:auto;
+    display:block;
 }
 
 /* HEADER */
@@ -228,6 +229,11 @@ main div section ul {
     padding-bottom: 12px;
 }
 
+#contacto img {
+    height: 80px;
+    width: 80px;
+}
+
 /* FOOTER */
 footer {
     border-top: 1px solid var(--gris-claro);
@@ -395,4 +401,13 @@ height:20px;
     .btn-principal {
         align-self: center;
     }
+}
+
+/* Logo Mobile */
+@media (max-width:768px) {
+
+    .logo img {
+        height:28px;
+    }
+
 }
