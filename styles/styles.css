@@ -1,0 +1,321 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES DE COLOR */
+:root {
+    --negro: #111;
+    --gris-oscuro: #333;
+    --gris-medio: #777;
+    --gris-claro: #e5e5e5;
+    --blanco: #fff;
+}
+
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    border-bottom: 1px solid var(--gris-claro);
+    /* Opcion 1 burlywood */
+    /* Opcion 2 whitesmoke */
+    background-color: burlywood;
+}
+
+header h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--negro);
+}
+
+/* MAIN */
+main {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+    /* CAPA 1: FONDO TOTAL */
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/taller-fondo.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: grayscale(100%);
+    opacity: 0.50;
+
+    z-index: -2;
+}
+
+    /* CAPA 2: CONTENIDO */
+.contenedor {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+    z-index: 1;
+}
+
+    /* CAPA 2: FONDO */
+.contenedor::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/cuero-fondo.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: grayscale(100%);
+    opacity: 0.08;
+
+    z-index: -1;
+}
+    
+
+/* SECCIONES */
+section {
+    margin-bottom: 80px;
+}
+
+section h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 24px;
+    color: var(--negro);
+}
+
+/* HERO / PRESENTACION */
+#hero {
+    position: relative;
+    padding: 80px 40px;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/fondo-hero.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+}
+
+#hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: whitesmoke;
+}
+
+#hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    max-width: 500px;
+    margin-bottom: 40px;
+    color: whitesmoke;
+}
+
+#hero a {
+    font-size: 14px;  
+    padding-bottom: 4px;
+}
+
+/* DESTACADOS / COLECCIÓN */
+section h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+section article {
+    border-top: 1px solid var(--gris-claro);
+    padding: 24px 0;
+}
+
+section article h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+section article p {
+    font-size: 14px;
+    color: var(--gris-medio);
+    margin-bottom: 8px;
+}
+
+section article a {
+    font-size: 14px;
+    border-bottom: 1px solid var(--gris-oscuro);
+    padding-bottom: 2px;
+}
+
+/* CONTACTO */
+main div section ul {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+
+#contacto ul {
+    list-style: none;
+}
+
+#contacto li {
+    margin-bottom: 12px;
+}
+
+#contacto p {
+    padding-bottom: 12px;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid var(--gris-claro);
+    padding: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--blanco);
+    background-color: dimgrey;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+/* GRILLA DE PRODUCTOS */
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.grilla-productos article {
+    border-top: 1px solid var(--gris-claro);
+    padding-top: 24px;
+}
+
+.grilla-productos article a {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.grilla-productos article h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 580;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+/* IMAGENES DE PRODUCTO */
+.imagen-producto {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* BOTON PRINCIPAL */
+.btn-principal{
+    display: inline-block;
+    align-self: flex-end;
+    margin-top: 40px;
+    padding: 14px 32px;
+
+    border: 1px solid var(--negro);
+    color: var(--negro);
+    background-color: burlywood;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: var(--negro) 0.3s ease, color 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+/* BOTON SECUNDARIO */
+.btn-secundario {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--gris-oscuro);
+    border-bottom: 1px solid var(--gris-oscuro);
+    padding-bottom: 2px;
+
+    transition: opacity 0.2s ease;
+}
+
+.btn-secundario:hover {
+    opacity: 0.6;
+}
+
