@@ -23,13 +23,15 @@ body {
 }
 
 /* LINKS */
-a {
-    text-decoration: none;
-    color: var(--negro);
+a, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+    color: inherit;
 }
 
-a:hover {
-    opacity: 0.7;
+/* Logo */
+.logo, .logo:visited, .logo:hover, .logo:active {
+    color: var(--negro) !important;
+    text-decoration: none;
 }
 
 /* HEADER */
@@ -265,19 +267,28 @@ footer p {
     margin-bottom: 6px;
 }
 
-/* IMAGENES DE PRODUCTO */
-.imagen-producto {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    margin-bottom: 16px;
+/* CAROUSEL */
+.carousel img {
+    height:300px;
+    object-fit:cover;
 }
 
-.imagen-producto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.carousel-control-prev,
+.carousel-control-next{
+opacity:0;
+transition:opacity 0.3s ease;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next{
+opacity:1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+filter:invert(25%);
+width:20px;
+height:20px;
 }
 
 /* BOTON PRINCIPAL */
@@ -319,3 +330,69 @@ footer p {
     opacity: 0.6;
 }
 
+/* MQ */
+
+/* Ajustar contenido mobile */
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 40px 20px;
+    }
+}
+
+/* Grilla Tablet */
+@media (max-width: 900px) {
+    .grilla-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Grilla Mobile */
+@media (max-width: 600px) {
+    .grilla-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Header responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+/* Hero responsive */
+
+@media (max-width: 600px) {
+    #hero {
+        padding: 80px 30px;
+    }
+
+    #hero h2 {
+        font-size: 34px;
+    }
+
+    #hero p {
+        font-size: 15px;
+    }
+}
+
+/* Imagenes de producto */
+@media (max-width: 600px) {
+    .imagen-producto {
+        height: 240px;
+    }
+}
+
+/* Boton principal */
+@media (max-width: 600px) {
+    .btn-principal {
+        align-self: center;
+    }
+}
