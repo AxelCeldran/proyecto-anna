@@ -1,0 +1,89 @@
+/* MQ */
+
+/* Ajustar contenido mobile */
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 40px 20px;
+    }
+}
+
+/* Grilla Tablet */
+@media (max-width: 900px) {
+    .grilla-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Grilla Mobile */
+@media (max-width: 600px) {
+    .grilla-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Header responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+/* Hero responsive */
+
+@media (max-width: 600px) {
+    #hero {
+        padding: 80px 30px;
+    }
+
+    #hero h2 {
+        font-size: 34px;
+    }
+
+    #hero p {
+        font-size: 15px;
+    }
+}
+
+/* Oficio responsive */
+@media (max-width:768px) {
+
+    .oficio-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .oficio-hero img, .oficio-video video {
+        height: 300px;
+    }
+
+}
+
+/* Imagenes de producto */
+@media (max-width: 600px) {
+    .imagen-producto {
+        height: 240px;
+    }
+}
+
+/* Boton principal */
+@media (max-width: 600px) {
+    .btn-principal {
+        align-self: center;
+    }
+}
+
+/* Logo Mobile */
+@media (max-width:768px) {
+
+    .logo img {
+        height:28px;
+    }
+
+}

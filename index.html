@@ -15,21 +15,32 @@
 <body>
     <!-- HEADER -->
     <header>
-        <div>
-            <!-- LOGO -->
-            <a href="index.html" class="logo">
-                <img src="images/logo-anna.svg" alt="ANNA">
-            </a>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
 
-        <nav>
-            <ul>
-                <li><a href="#">Tienda Online</a></li>
-                <li><a href="#sobre-anna">Sobre ANNA</a></li>
-                <li><a href="#destacados">Destacados</a></li>
-                <li><a href="#oficio">El Oficio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo-anna.svg" alt="Logo Anna"></a>
+
+                <!-- Botón hamburguesa (solo aparece cuando colapsa) -->
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#menuNav"
+                >
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://anna211.mitiendanube.com/" target="_blank">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
 
@@ -43,117 +54,269 @@
                 <p>
                     Camperas de cuero hechas en Buenos Aires, con materiales auténticos y diseño atemporal.
                 </p>
-                <a href="pages/coleccion.html" class="btn-principal">Ver colección</a>
+
+                <a href="pages/coleccion.html" class="ver-coleccion-btn">
+                    Ver colección →
+                </a>
+
             </section>
 
             <!-- Sobre ANNA -->
             <section id="sobre-anna">
-                <h2>Sobre ANNA</h2>
 
-                <p>
-                    ANNA es una marca nacida del trabajo y la memoria.
-                </p>
-                <p>
-                    Desde un taller familiar en el centro de Buenos Aires, hacemos camperas de cuero con una idea simple: que perduren en el tiempo.
-                </p>
-                <p>
-                    Creemos en el oficio, en los procesos reales y en el respeto por los materiales auténticos.
-                </p>
-                <p>
-                    Cada prenda lleva horas de trabajo, decisiones cuidadas y una forma de hacer que se transmite de generación en generación.
-                </p>
+                <h2 class="section-title">Sobre ANNA</h2>
+
+                <div class="sobre-contenido">
+
+                    <p class="sobre-intro">
+                    ANNA nace de la búsqueda de una campera de cuero que combine
+                    carácter, simplicidad y diseño contemporáneo.
+                    </p>
+
+                    <p>
+                    Cada pieza se produce en series limitadas y con materiales de alta
+                    calidad, priorizando la durabilidad y la identidad propia de cada
+                    prenda.
+                    </p>
+
+                    <p>
+                    El objetivo es crear prendas atemporales que acompañen durante años
+                    y se conviertan en parte de la historia personal de quien las usa.
+                    </p>
+
+                    <p class="anna-frase">
+                    "Cuero genuino. Diseño atemporal."
+                    </p>
+
+                </div>
+
             </section>
 
             <!-- Destacados -->
             <section id="destacados">
-                <h2>Modelos Destacados</h2>
 
-                <div class="grilla-productos">
+                <h2 class="section-title">Modelos destacados</h2>
 
-                    <article>
-                        <div id="carousel-orion" class="carousel slide" data-bs-ride="carousel">
+                <div class="row g-4">
 
-                            <div class="carousel-inner">
+                    <div class="col-md-4">
+                        <div class="card producto-card shadow-sm h-100">
 
-                                <div class="carousel-item active">
-                                    <img src="images/modelo-orion-01.png" class="d-block w-100" alt="Campera Orion">
+                            <!-- Carousel -->
+                            <div id="carousel-lyra" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    <div class="carousel-item active">
+                                        <img src="images/modelo-lyra-01.jpg" class="d-block w-100" alt="Campera lyra">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/modelo-lyra-02.jpg" class="d-block w-100" alt="Campera lyra">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/modelo-lyra-03.jpg" class="d-block w-100" alt="Campera lyra">
+                                    </div>
+
                                 </div>
 
-                                <div class="carousel-item">
-                                    <img src="images/modelo-orion-02.png" class="d-block w-100" alt="Campera Orion">
-                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-lyra" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
 
-                                <div class="carousel-item">
-                                    <img src="images/modelo-orion-03.png" class="d-block w-100" alt="Campera Orion">
-                                </div>
-
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-lyra" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
                             </div>
 
-                        </div>
-                        
-                        <h3>Orion</h3>
-                        <p>Campera de cuero genuino modelo masculino de diseño atemporal, con cierre centrado y dos bolsillos.</p>
-                        <p>Talles: S - M - L - XL</p>
-                        <a href="#" class="btn-secundario">Ver Producto</a>
-                    </article>
+                            <!-- Info -->
+                            <div class="card-body">
 
-                    <article>
-                        <div id="carousel-lyra" class="carousel slide" data-bs-ride="carousel">
+                                <h5 class="card-title">Campera Lyra</h5>
 
-                            <div class="carousel-inner">
+                                <p class="card-text">
+                                    Modelo femenino de diseño atemporal, con cuello en v, cierre centrado y dos bolsillos.
+                                </p>
 
-                                <div class="carousel-item active">
-                                    <img src="images/modelo-lyra-01.png" class="d-block w-100" alt="Campera lyra">
+                                <!-- colores -->
+                                <div class="mb-3">
+                                    <small class="text-muted">Colores</small>
+
+                                    <div class="color-container">
+                                        <span class="color negro"></span>
+                                        <span class="color marron"></span>
+                                    </div>
+
                                 </div>
 
-                                <div class="carousel-item">
-                                    <img src="images/modelo-lyra-02.png" class="d-block w-100" alt="Campera lyra">
+                                <!-- talles -->
+                                <div class="mb-3">
+                                    <small class="text-muted">Talles</small>
+
+                                    <div class="talles">
+                                        <span class="badge bg-light text-dark">S</span>
+                                        <span class="badge bg-light text-dark">M</span>
+                                        <span class="badge bg-light text-dark">L</span>
+                                        <span class="badge bg-light text-dark">XL</span>
+                                    </div>
+
                                 </div>
 
-                                <div class="carousel-item">
-                                    <img src="images/modelo-lyra-03.png" class="d-block w-100" alt="Campera lyra">
-                                </div>
+                                <!-- boton -->
+                                <a href="https://anna211.mitiendanube.com/productos/campera-de-cuero-anna-lyra/" target="_blank" class="btn btn-dark w-100">
+                                    Comprar
+                                </a>
 
                             </div>
-
                         </div>
-                        
-                        <h3>Lyra</h3>
-                        <p>Campera de cuero genuino modelo femenino de diseño atemporal, con cuello en v, cierre centrado y dos bolsillos.</p>
-                        <p>Talles: S - M - L - XL</p>
-                        <a href="#" class="btn-secundario">Ver Producto</a>
-                    </article>
-
-                    <article>
-                        <div id="carousel-vega" class="carousel slide" data-bs-ride="carousel">
-
-                            <div class="carousel-inner">
-
-                                <div class="carousel-item active">
-                                    <img src="images/modelo-vega-01.png" class="d-block w-100" alt="Campera vega">
-                                </div>
-
-                                <div class="carousel-item">
-                                    <img src="images/modelo-vega-02.png" class="d-block w-100" alt="Campera vega">
-                                </div>
-
-                                <div class="carousel-item">
-                                    <img src="images/modelo-vega-03.png" class="d-block w-100" alt="Campera vega">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <h3>Vega</h3>
-                        <p>Campera de cuero genuino modelo femenino de diseño atemporal, con cierre cruzado y tres bolsillos.</p>
-                        <p>Talles: S - M - L - XL</p>
-                        <a href="#" class="btn-secundario">Ver Producto</a>
-                    </article>
+                    </div>
                     
+                    <div class="col-md-4">
+                        <div class="card producto-card shadow-sm h-100">
+
+                            <!-- Carousel -->
+                            <div id="carousel-vega" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    <div class="carousel-item active">
+                                        <img src="images/modelo-vega-01.jpg" class="d-block w-100" alt="Campera vega">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/modelo-vega-02.jpg" class="d-block w-100" alt="Campera vega">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/modelo-vega-03.jpg" class="d-block w-100" alt="Campera vega">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-vega" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-vega" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+
+                            <!-- Info -->
+                            <div class="card-body">
+
+                                <h5 class="card-title">Campera Vega</h5>
+
+                                <p class="card-text">
+                                    Modelo femenino de diseño atemporal, con cierre cruzado y tres bolsillos.
+                                </p>
+
+                                <!-- colores -->
+                                <div class="mb-3">
+                                    <small class="text-muted">Colores</small>
+
+                                    <div class="color-container">
+                                        <span class="color negro"></span>
+                                        <span class="color marron"></span>
+                                    </div>
+
+                                </div>
+
+                                <!-- talles -->
+                                <div class="mb-3">
+                                    <small class="text-muted">Talles</small>
+
+                                    <div class="talles">
+                                        <span class="badge bg-light text-dark">S</span>
+                                        <span class="badge bg-light text-dark">M</span>
+                                        <span class="badge bg-light text-dark">L</span>
+                                        <span class="badge bg-light text-dark">XL</span>
+                                    </div>
+
+                                </div>
+
+                                <!-- boton -->
+                                <a href="https://anna211.mitiendanube.com/productos/campera-de-cuero-anna-vega/" target="_blank" class="btn btn-dark w-100">
+                                    Comprar
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card producto-card shadow-sm h-100">
+
+                            <!-- Carousel -->
+                            <div id="carousel-orion" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    <div class="carousel-item active">
+                                        <img src="images/modelo-orion-01.jpg" class="d-block w-100" alt="Campera orion">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/modelo-orion-02.jpg" class="d-block w-100" alt="Campera orion">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="images/modelo-orion-03.jpg" class="d-block w-100" alt="Campera orion">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-orion" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-orion" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+
+                            <!-- Info -->
+                            <div class="card-body">
+
+                                <h5 class="card-title">Campera Orion</h5>
+
+                                <p class="card-text">
+                                    Modelo masculino de diseño atemporal, con cierre centrado y dos bolsillos.
+                                </p>
+
+                                <!-- colores -->
+                                <div class="mb-3">
+                                    <small class="text-muted">Colores</small>
+
+                                    <div class="color-container">
+                                        <span class="color negro"></span>
+                                        <span class="color marron"></span>
+                                    </div>
+
+                                </div>
+
+                                <!-- talles -->
+                                <div class="mb-3">
+                                    <small class="text-muted">Talles</small>
+
+                                    <div class="talles">
+                                        <span class="badge bg-light text-dark">S</span>
+                                        <span class="badge bg-light text-dark">M</span>
+                                        <span class="badge bg-light text-dark">L</span>
+                                        <span class="badge bg-light text-dark">XL</span>
+                                    </div>
+
+                                </div>
+
+                                <!-- boton -->
+                                <a href="https://anna211.mitiendanube.com/productos/campera-de-cuero-anna-orion/" target="_blank" class="btn btn-dark w-100">
+                                    Comprar
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <a href="pages/coleccion.html" class="btn-secundario">Ver colección completa</a>
             </section>
 
 
@@ -161,7 +324,7 @@
             <section id="oficio">
 
                 <div class="oficio-intro">
-                    <h2>El Oficio</h2>
+                    <h2 class="section-title">El Oficio</h2>
 
                     <p>
                     Cada campera ANNA comienza en el taller.
@@ -219,14 +382,17 @@
 
             <!-- Contacto -->
             <section id="contacto">
-                <h2>Contacto</h2>
+                <h2 class="section-title">Contacto</h2>
 
-                <p>Para consultas o compras:</p>
+                <p class="contacto-texto">
+                Para consultas sobre productos, disponibilidad o pedidos,
+                podés contactarnos a través de nuestras redes.
+                </p>
 
                 <ul>
-                    <li><a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp.svg" alt="Logo Whatsapp"></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="Logo Instagram"></a></li>
-                    <li><a href="#"><img src="images/tiendanube.svg" alt="Logo Tiendanube"></a></li>
+                    <li><a href="https://api.whatsapp.com/send/?phone=541170271468&text&type=phone_number&app_absent=0" target="_blank"><img src="images/whatsapp.svg" alt="Logo Whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/anna.cueros/" target="_blank"><img src="images/instagram.svg" alt="Logo Instagram"></a></li>
+                    <li><a href="https://anna211.mitiendanube.com/" target="_blank"><img src="images/tiendanube.svg" alt="Logo Tiendanube"></a></li>
                 </ul>
 
             </section>

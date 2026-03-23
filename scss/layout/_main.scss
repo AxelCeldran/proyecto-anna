@@ -1,0 +1,201 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins
+@use "../utilities/mixins" as *;
+
+/* MAIN */ 
+main {
+    position: relative;
+    z-index: 1;
+    .contenedor{
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px;
+        background-color: $blanco;
+        z-index: 1;
+        #hero {
+            position: relative;
+            padding: 80px 40px;
+            margin-bottom: 100px;
+            @include flex(center, column, none);
+            z-index: 1;
+            h2{
+                font-family: 'Playfair Display', serif;
+                font-size: 48px;
+                font-weight: 500;
+                line-height: 1.2;
+                margin-bottom: 24px;
+                color: $color-texto;
+            }
+            p{
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                max-width: 500px;
+                margin-bottom: 40px;
+                color: $color-texto;
+            }
+            a{
+                font-size: 14px;  
+                padding-bottom: 4px;
+            }
+        }
+        #hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("../images/fondo-hero.jpeg");
+            @include background;
+            z-index: -1;
+        }
+        #sobre-anna{
+            max-width: 700px;
+            margin: 120px auto;
+            text-align: center;
+            .section-title {
+                font-size: 2.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-align: center;
+                margin-bottom: 40px;
+                position: relative;
+            }
+            .section-title::after {
+                content: "";
+                display: block;
+
+                width: 60px;
+                height: 2px;
+
+                background: black;
+
+                margin: 15px auto 0 auto;
+            }
+            .sobre-contenido{
+                .sobre-intro{
+                    font-size: 35px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+                p{
+                    font-size: 25px;
+                    color: #555;
+                    line-height: 1.7;
+                    margin-bottom: 20px;
+                }
+                .anna-frase{
+                    margin-top: 40px;
+                    font-style: italic;
+                    letter-spacing: 1px;
+                    color: #777;
+                }
+            }
+        }
+        #oficio {
+            padding-top: 50px;
+            .oficio-intro {
+                font-size: 23px;
+                max-width: 700px;
+                margin: 0 auto 80px auto;
+                text-align: center;
+                h2 {
+                    @extend .section-title;
+                    margin-bottom: 20px;
+                }
+            }
+            .oficio-hero {
+                img {
+                    @include img(100%, 500px);
+                    object-fit: cover;
+                    margin-bottom: 80px;
+                }
+            }
+            .oficio-grid {
+                @include grid(1fr 1fr);
+                gap: 60px;
+                align-items: center;
+                margin-bottom: 80px;
+                .oficio-imagen {
+                    overflow: hidden;
+                    img {
+                        @include img(100%, 400px);
+                        object-fit: cover;
+                        transition: transform 0.6s ease;
+                        opacity: 0;
+                        transform: translateY(40px);
+                        animation: aparecer 1s ease forwards;
+                        animation-timeline: view();
+                        animation-range: entry 0% cover 30%;
+                    }
+                }
+                .oficio-imagen:hover img {
+                    transform: scale(1.05);
+                }
+                .oficio-texto {
+                    h3 {
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: 20px;
+                        max-width: 420px;
+                        line-height: 1.6;
+                    }
+                    opacity: 0;
+                    transform: translateY(40px);
+                    animation: aparecer 1s ease forwards;
+                    animation-timeline: view();
+                    animation-range: entry 0% cover 30%;
+                }
+            }
+            .oficio-video {
+                video {
+                    @include img(100%, 500px);
+                    object-fit: cover;
+                }
+            }
+        }
+        #contacto {
+            h2 {
+                @extend .section-title;
+            }
+            .contacto-texto {
+                font-size: 20px;
+                text-align: center;
+                max-width: 500px;
+                margin: 0 auto 30px auto;
+                line-height: 1.6;
+            }
+            ul {
+                padding-top: 16px;
+                @include flex(space-around, row, center);
+                gap: $gap;
+                list-style: none;
+                li {
+                    margin-bottom: 12px;
+                    a {
+                        img {
+                            @include img(80px, 80px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contenedor::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("../images/cuero-fondo.jpg");
+        @include background;
+        filter: grayscale(100%);
+        opacity: 0.2;
+        z-index: -1;
+    }
+}
+
+
+.sticky-box{
+  position: sticky;
+  top: 40px;
+}

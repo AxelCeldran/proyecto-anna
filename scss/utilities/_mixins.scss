@@ -1,0 +1,28 @@
+//mixins
+
+@mixin flex($justify, $direction, $align){
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin grid($column) {
+    display: grid;
+    grid-template-columns: $column;
+}
+
+@mixin texto($size, $text) {
+    font-size: $size;
+    text-align: $text;
+}
+
+@mixin img($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin background {
+    background-size: cover;
+    background-position: center;
+}

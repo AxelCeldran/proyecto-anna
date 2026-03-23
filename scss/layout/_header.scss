@@ -1,0 +1,32 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins
+@use "../utilities/mixins" as *;
+
+/* HEADER */
+header {
+    padding: 24px 40px;
+    background-color: rgb(119, 101, 77);
+    .navbar {
+        background-color: rgb(119, 101, 77);
+        div {
+            ul {
+                li {
+                    .nav-link {
+                        font-size: 22px;        
+                        font-weight: 500;
+                        color: $negro;
+                    }
+                    .nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link.active {
+                        color: $negro;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    .navbar:hover, .navbar:focus, .navbar:active, .navbar.active {
+        color: $negro;
+        box-shadow: none;
+    }
+}

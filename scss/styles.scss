@@ -1,0 +1,20 @@
+//reset
+@use "base/reset";
+//estilos generales
+@use "base/general";
+//header
+@use "layout/header";
+//main
+@use "layout/main";
+//cards
+@use "layout/card";
+//carrousel
+@use "layout/carrousel";
+//boton
+@use "layout/boton";
+//animaciones
+@use "utilities/animacion";
+//footer
+@use "layout/footer";
+//mq
+@use "layout/mq";

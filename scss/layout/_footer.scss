@@ -1,0 +1,17 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins
+@use "../utilities/mixins" as *;
+
+/* FOOTER */
+footer {
+    border-top: 1px solid $gris-claro;
+    padding: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: $blanco;
+    background-color: dimgrey;
+    p {
+        margin-bottom: $gap;
+    }
+}

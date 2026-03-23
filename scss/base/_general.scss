@@ -1,0 +1,72 @@
+//variables
+@use "../utilities/variables" as *;
+//mixins
+@use "../utilities/mixins" as *;
+
+
+/* ESTILOS GENERALES */
+body {
+    background: none;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  @include img(100%, 100%);
+
+  background-image: url("../images/taller-fondo.jpg");
+  @include background;
+
+  filter: grayscale(10%);
+  opacity: 0.7;
+
+  z-index: -1;
+}
+
+/* LINKS */
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+ a:visited, a:hover, a:active {
+    @extend a;
+}
+
+/* Logo */
+.logo {   
+    @include img(auto, 50px);
+    display:block;   
+}
+
+/* SECCIONES */
+section {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: black;
+    margin: 15px auto 0 auto;
+}
+
+#destacados h2 {
+    padding-bottom: 20px;
+}
+
