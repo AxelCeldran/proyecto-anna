@@ -45,6 +45,23 @@ a {
 /* SECCIONES */
 section {
     margin-bottom: 80px;
+    .titulo-pagina {
+        font-size: 2.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .titulo-pagina::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: black;
+    margin: 15px auto 0 auto;
+    }
 }
 
 .section-title {

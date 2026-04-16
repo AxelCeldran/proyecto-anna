@@ -27,7 +27,7 @@ main {
             margin-bottom: 100px;
             @include flex(center, column, none);
             z-index: 1;
-            h2{
+            h1{
                 font-family: 'Playfair Display', serif;
                 font-size: 48px;
                 font-weight: 500;
@@ -182,7 +182,7 @@ main {
                     margin-bottom: 12px;
                     a {
                         img {
-                            @include img(80px, 80px);
+                            @include img(60px, 60px);
                         }
                     }
                 }
